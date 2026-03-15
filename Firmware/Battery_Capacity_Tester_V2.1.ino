@@ -301,6 +301,7 @@ void timerInterrupt() {
     // ------------------------------------------------------------------------
     // Measure battery voltage using 100 ADC samples
     // ------------------------------------------------------------------------
+    sample = 0;   // Reset accumulator
     for (int i = 0; i < 100; i++) {
       sample = sample + analogRead(BAT_Pin);
       delay(2);
